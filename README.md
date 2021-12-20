@@ -19,4 +19,4 @@ If you want to work on notebooks that exist on your host machine, run the follow
 
 `docker run -it --rm -v "<path to your jupyter notebooks>":/tf/notebooks -p 8888:8888 mldocker`
 
-Replace `<path to your jupyter notebooks>` with the path to a relavent folder on your host machine.
+Replace `<path to your jupyter notebooks>` with the path to a relavent folder on your host machine. The Jupyter Notebooks landing page will now have your folder listed.
