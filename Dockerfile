@@ -1,15 +1,18 @@
 
-FROM tensorflow/tensorflow:latest-gpu-jupyter
+FROM tensorflow/tensorflow:latest-jupyter
 
 ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update
     
-#Install geopandas
+# Install geopandas
 RUN python3 -m pip install geopandas
 
-#Install sklearn
+# Install sklearn
 RUN python3 -m pip install -U scikit-learn
+
+# Install PyTorch (CPU version)
+RUN python3 -m pip install torch==1.10.1+cpu torchvision==0.11.2+cpu torchaudio==0.10.1+cpu -f https://download.pytorch.org/whl/cpu/torch_stable.html
 
 WORKDIR /tf
 EXPOSE 8888
