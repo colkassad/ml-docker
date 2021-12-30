@@ -6,17 +6,17 @@ A docker container with the latest tensorflow, pytorch, scikit-learn, and geopan
 
 `cd ml-docker`
 
-`docker build -t mldocker .`
+`docker build -t ml-docker .`
 
 # Running
 After building, run the following command to start up the docker container.
 
-`docker run -it --rm -p 8888:8888 mldocker`
+`docker run -it --rm -p 8888:8888 ml-docker`
 
 The link with authentication token for Jupyter Notebooks will be listed in the shell once the command executes succesfully.
 
 If you want to work on notebooks that exist on your host machine, run the following which will mount your folder on the docker container:
 
-`docker run -it --rm -v "<path to your jupyter notebooks>":/tf/notebooks -p 8888:8888 mldocker`
+`docker run -it --rm -v "<path to your jupyter notebooks>":/tf/notebooks -p 8888:8888 ml-docker`
 
 Replace `<path to your jupyter notebooks>` with the path to a relavent folder on your host machine. The Jupyter Notebooks landing page will now have your folder listed.
